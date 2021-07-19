@@ -1,24 +1,85 @@
 {
-  "loader":"morevillagers:animation",
-  "base_model": {
-    "loader": "forge:composite",
-    "parts": {
-
+  "loader": "morevillagers:animation",
+  "ambientocclusion": false,
+  "parts": {
+      "part1":
+        {
+          "valuelol": "minecraft:block/acacia_log",
+          "elements" : [{
+          "from": [10, 0, 10],
+          "to": [14, 8, 14],
+          "color": 4,
+          "faces": {
+            "north": {"uv": [0, 0, 4, 8], "texture": "#valuelol"},
+            "east": {"uv": [0, 0, 4, 8], "texture": "#valuelol"},
+            "south": {"uv": [0, 0, 4, 8], "texture": "#valuelol"},
+            "west": {"uv": [0, 0, 4, 8], "texture": "#valuelol"},
+            "up": {"uv": [0, 0, 4, 4], "texture": "#valuelol"},
+            "down": {"uv": [0, 0, 4, 4], "texture": "#valuelol"}
+          }
+          }]
+        },
+    "part2" : {
+      "valuelol": "minecraft:block/iron_block",
+      "elements" : [{
+          "from": [11, 8, 11],
+          "to": [13, 16, 13],
+          "color": 4,
+          "faces": {
+            "north": {"uv": [0, 0, 2, 8], "texture": "#valuelol"},
+            "east": {"uv": [0, 0, 2, 8], "texture": "#valuelol"},
+            "south": {"uv": [0, 0, 2, 8], "texture": "#valuelol"},
+            "west": {"uv": [0, 0, 2, 8], "texture": "#valuelol"},
+            "up": {"uv": [0, 0, 2, 2], "texture": "#valuelol"},
+            "down": {"uv": [0, 0, 2, 2], "texture": "#valuelol"}
+        }
+      }]
+    },
+    "part3" : {
+      "valuelol": "minecraft:block/acacia_log",
+      "elements" : [{
+        "from": [11, 8, 3],
+        "to": [12, 16, 4],
+        "color": 4,
+        "faces": {
+          "north": {"uv": [0, 0, 1, 8], "texture": "#valuelol"},
+          "east": {"uv": [0, 0, 1, 8], "texture": "#valuelol"},
+          "south": {"uv": [0, 0, 1, 8], "texture": "#valuelol"},
+          "west": {"uv": [0, 0, 1, 8], "texture": "#valuelol"},
+          "up": {"uv": [0, 0, 1, 1], "texture": "#valuelol"},
+          "down": {"uv": [0, 0, 1, 1], "texture": "#valuelol"}
+        }
+      }]
+    },
+    "part4" : {
+      "valuelol": "minecraft:block/acacia_log",
+      "elements" : [{
+        "from": [11, 16, 3],
+        "to": [13, 18, 13],
+        "rotation": {"angle": 0, "axis": "x", "origin": [12, 20, 12]},
+        "color": 4,
+        "faces": {
+          "north": {"uv": [0, 0, 2, 2], "rotation": 180, "texture": "#valuelol"},
+          "east": {"uv": [0, 0, 2, 10], "rotation": 90, "texture": "#valuelol"},
+          "south": {"uv": [0, 0, 2, 2], "texture": "#valuelol"},
+          "west": {"uv": [0, 0, 2, 10], "rotation": 270, "texture": "#valuelol"},
+          "up": {"uv": [0, 0, 2, 10], "texture": "#valuelol"},
+          "down": {"uv": [0, 0, 2, 10], "rotation": 180, "texture": "#valuelol"}
+        }
+      }]
     }
   },
   "joints": {
-      "partname1" : {
-        "joint1" : {
-          "location" : [1,2,3],
-          "type" : "rotation",
-          "axis" : "x",
-          "constraint" : "none"},
-        "joint2" : {
-          "location" : [1,2,3],
-          "type" : "translation",
-          "axis" : "y",
-          "constraints" : [0,5]
-        }
-      }
+    "partname1": {
+      "location": [
+        12,
+        8,
+        12
+      ],
+      "type": "rotation",
+      "axis": "y",
+      "constraint": "none",
+      "connected_parts" : ["part1","part2"]
+    }
   }
 }

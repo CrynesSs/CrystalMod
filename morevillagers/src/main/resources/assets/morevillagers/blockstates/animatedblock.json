@@ -1,33 +1,9 @@
 {
-  "parameters": {
-    "raw_anim_time": [
-      "+",
-      0
-    ],
-    "slowed_anim_time": [
-      "/",
-      4
-    ],
-    "four": [
-      "/",
-      "#slowed_anim_time"
-    ]
-  },
-  "clips": {
-    "default": "modid:block/animation_block@default",
-    "moving": [
-      "apply",
-      "modid:block/animation_block@moving",
-      "#slowed_anim_time"
-    ]
-  },
-  "states": [
-    "default",
-    "moving"
-  ],
-  "transitions": {
-    "default": "moving",
-    "moving": "default"
-  },
-  "startstate": "moving"
+  "forge_marker":1,
+  "variants": {
+    "facing=north": { "model": "morevillagers:block/animatedblock" },
+    "facing=east": { "model": "morevillagers:block/animatedblock", "y": 90 },
+    "facing=south": { "model": "morevillagers:block/animatedblock", "y": 180 },
+    "facing=west": { "model": "morevillagers:block/animatedblock", "y": 270 }
+  }
 }

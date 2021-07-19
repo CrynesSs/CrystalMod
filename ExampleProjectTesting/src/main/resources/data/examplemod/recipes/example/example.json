@@ -1,0 +1,9 @@
+{
+  "input" : [["x,x,x,x,x"],["y,y,y,y,y"],["z,z,z,z,z"],["x,y,z,y,z"],["x,z,y,y,y"]],
+  "counts": [[1,1,1,1,1],[2,2,2,2,2],[3,3,3,3,3],[4,4,4,4,4],[5,5,5,5,5]],
+  "keys" : {
+    "x" : "exampleitem1",
+    "y" : "exampleitem2",
+    "z" : "exampleitem3"
+  }
+}

@@ -1,12 +1,10 @@
 {
   "required": true,
-  "package": "com.mods.Mixins.mixin",
+  "package": "com.crylol.Mixins.mixin",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "cryness_double_slabs.refmap.json",
+  "refmap": "morevillagers.refmap.json",
   "mixins": [
-    "MixinBlockItem",
-    "MixinSlabBlock",
-    "MixinParticleManager"
+    "MixinClips"
   ],
   "minVersion": "0.8"
 }

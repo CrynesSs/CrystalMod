@@ -1,6 +1,6 @@
-package com.CrynesSs.RedstoneEnhancement.recipes.AlloySmelting;
+package com.example.Recipes.AlloySmelting;
 
-import com.CrynesSs.RedstoneEnhancement.RedstoneEnhancement;
+import com.example.examplemod.ExampleMod;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.IRecipeType;
@@ -13,18 +13,18 @@ import javax.annotation.Nonnull;
 
 //Same
 public interface IAlloySmeltingRecipe extends IRecipe<RecipeWrapper> {
-    ResourceLocation RECIPE_TYPE_ID = new ResourceLocation(RedstoneEnhancement.MOD_ID, "alloysmelting");
+    ResourceLocation RECIPE_TYPE_ID = new ResourceLocation(ExampleMod.MOD_ID, "alloysmelting");
 
     @Nonnull
     @Override
     default IRecipeType<?> getType() {
-        return Registry.RECIPE_TYPE.getValue(RECIPE_TYPE_ID).get();
+        return Registry.RECIPE_TYPE.get(RECIPE_TYPE_ID);
     }
 
     @Override
-    default boolean canFit(int width, int height) {
+    default boolean canCraftInDimensions(int p_194133_1_, int p_194133_2_){
         return false;
-    }
+    };
 
     Ingredient getInput1();
 

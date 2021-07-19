@@ -1,6 +1,6 @@
-package com.CrynesSs.RedstoneEnhancement.recipes.AlloySmelting;
+package com.example.Recipes.AlloySmelting;
 
-import com.CrynesSs.RedstoneEnhancement.Util.Init.RecipeSerializerInit;
+import com.example.Recipes.RecipeSerializerInit;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.item.crafting.Ingredient;
@@ -34,21 +34,18 @@ public class AlloySmeltingRecipe implements IAlloySmeltingRecipe {
 
     @Override
     public boolean matches(RecipeWrapper inv, @Nonnull World worldIn) {
-        return this.input1.test(inv.getStackInSlot(0)) && this.input2.test(inv.getStackInSlot(1)) || this.input1.test(inv.getStackInSlot(1)) && this.input2.test(inv.getStackInSlot(0));
+        return this.input1.test(inv.getItem(0)) && this.input2.test(inv.getItem(1)) || this.input1.test(inv.getItem(1)) && this.input2.test(inv.getItem(0));
     }
 
-    @Nonnull
     @Override
-    public ItemStack getCraftingResult(@Nonnull RecipeWrapper inv) {
+    public ItemStack assemble(RecipeWrapper inv) {
         return this.output;
     }
 
-    @Nonnull
     @Override
-    public ItemStack getRecipeOutput() {
+    public ItemStack getResultItem() {
         return this.output;
     }
-
     @Nonnull
     @Override
     public ResourceLocation getId() {
@@ -85,7 +82,7 @@ public class AlloySmeltingRecipe implements IAlloySmeltingRecipe {
     @Nonnull
     @Override
     public NonNullList<Ingredient> getIngredients() {
-        return NonNullList.from(null, this.input1, this.input2);
+        return NonNullList.of(null, this.input1, this.input2);
     }
 
     @Override
