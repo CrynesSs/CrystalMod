@@ -1,0 +1,76 @@
+{
+  "joints": {
+    "group1": {
+      "0": [
+        1.0
+      ]
+    },
+    "group2": {
+      "1": [
+        1.0
+      ],
+      "2": [
+        1.0
+      ]
+    }
+  },
+  "clips": {
+    "default": {
+      "loop": false,
+      "joint_clips": {},
+      "events": {}
+    },
+    "moving": {
+      "loop": true,
+      "joint_clips": {
+        "group1": [
+          {
+            "variable": "offset_y",
+            "type": "uniform",
+            "interpolation": "linear",
+            "samples": [
+              0,
+              0.5,
+              0
+            ]
+          }
+        ],
+        "group2": [
+          {
+            "variable": "scale",
+            "type": "uniform",
+            "interpolation": "nearest",
+            "samples": [
+              1,
+              2,
+              1
+            ]
+          },
+          {
+            "variable": "axis_z",
+            "type": "uniform",
+            "interpolation": "nearest",
+            "samples": [
+              1,
+              2,
+              1
+            ]
+          },
+          {
+            "variable": "angle",
+            "type": "uniform",
+            "interpolation": "linear",
+            "samples": [
+              0,
+              180,
+              0
+            ]
+          }
+        ]
+      },
+      "events": {
+        "0.5": "halfway"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "loader":"morevillagers:animation",
+  "base_model": {
+    "loader": "forge:composite",
+    "parts": {
+
+    }
+  },
+  "joints": {
+      "partname1" : {
+        "joint1" : {
+          "location" : [1,2,3],
+          "type" : "rotation",
+          "axis" : "x",
+          "constraint" : "none"},
+        "joint2" : {
+          "location" : [1,2,3],
+          "type" : "translation",
+          "axis" : "y",
+          "constraints" : [0,5]
+        }
+      }
+  }
+}
